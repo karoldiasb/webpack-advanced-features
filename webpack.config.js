@@ -7,5 +7,10 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
-    mode: 'development'
+    mode: 'development',
+    plugins: [
+        new webpack.ProvidePlugin({
+            _: 'lodash'
+        })
+    ]
 }
